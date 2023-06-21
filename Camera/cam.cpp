@@ -61,7 +61,6 @@ float cam::Camera::pitch() const
 
 void cam::Camera::rotate(float_t yaw, float_t pitch)
 {
-	// x == yaw ,roll == y,pitch == z
 	if (yaw != 0)
 		eye_pos += glm::vec3{ glm::inverse(view)[0] } *(yaw * 0.15f);
 	if (pitch != 0)
